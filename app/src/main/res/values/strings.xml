@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GroveStore</string>
+    <string name="buy">결제하기</string>
+    <string name="check">선택</string>
+</resources>

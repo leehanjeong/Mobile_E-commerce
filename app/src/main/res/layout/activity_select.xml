@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="480dp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/pic1" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image1"
+                android:src="@drawable/pic2" />
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image2"
+                android:src="@drawable/pic3" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image3"
+                android:src="@drawable/pic4" />
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image4"
+                android:src="@drawable/pic5" />
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image5"
+                android:src="@drawable/pic6" />
+
+            <ImageView
+                android:id="@+id/image7"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image6"
+                android:src="@drawable/pic7" />
+
+            <ImageView
+                android:id="@+id/image8"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/image7"
+                android:src="@drawable/pic8" />
+
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/image1"
+                android:layout_toRightOf="@id/image1"
+                android:text="LENO OPS[2COLORS}" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image2"
+                android:layout_toEndOf="@id/image2"
+                android:layout_toRightOf="@id/image2"
+                android:text="ARGYLE CARDIGAN[3COLORS]" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image3"
+                android:layout_toEndOf="@id/image3"
+                android:layout_toRightOf="@id/image3"
+                android:text="ARAN CARDIGAN[4COLORS]" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image4"
+                android:layout_toEndOf="@id/image4"
+                android:layout_toRightOf="@id/image4"
+                android:text="REVER JUMPER[2COLORS]" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image5"
+                android:layout_toEndOf="@id/image5"
+                android:layout_toRightOf="@id/image5"
+                android:text="AILE KNIT[2COLORS]" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image6"
+                android:layout_toEndOf="@id/image6"
+                android:layout_toRightOf="@id/image6"
+                android:text="HOLLY JACKET[3COLORS]" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image7"
+                android:layout_toEndOf="@id/image7"
+                android:layout_toRightOf="@id/image7"
+                android:text="TOM PANTS[2COLORS]" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image8"
+                android:layout_toEndOf="@id/image8"
+                android:layout_toRightOf="@id/image8"
+                android:text="BELLA PANTS[2COLORS]" />
+
+
+            <TextView
+                android:id="@+id/tv1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1"
+                android:layout_toEndOf="@id/image1"
+                android:layout_toRightOf="@id/image1"
+                android:text="167,000원" />
+
+            <TextView
+                android:id="@+id/tv2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv2"
+                android:layout_toEndOf="@id/image2"
+                android:layout_toRightOf="@id/image2"
+                android:text="118,000원" />
+
+            <TextView
+                android:id="@+id/tv3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3"
+                android:layout_toEndOf="@id/image3"
+                android:layout_toRightOf="@id/image3"
+                android:text="134,000원" />
+
+            <TextView
+                android:id="@+id/tv4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv4"
+                android:layout_toEndOf="@id/image4"
+                android:layout_toRightOf="@id/image4"
+                android:text="284,000원" />
+
+            <TextView
+                android:id="@+id/tv5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv5"
+                android:layout_toEndOf="@id/image5"
+                android:layout_toRightOf="@id/image5"
+                android:text="116,000원" />
+
+            <TextView
+                android:id="@+id/tv6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv6"
+                android:layout_toEndOf="@id/image6"
+                android:layout_toRightOf="@id/image6"
+                android:text="428,000원" />
+
+            <TextView
+                android:id="@+id/tv7_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv7"
+                android:layout_toEndOf="@id/image7"
+                android:layout_toRightOf="@id/image7"
+                android:text="103,000원" />
+
+            <TextView
+                android:id="@+id/tv8_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv8"
+                android:layout_toEndOf="@id/image8"
+                android:layout_toRightOf="@id/image8"
+                android:text="118,000원" />
+
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1_1"
+                android:layout_toEndOf="@id/image1"
+                android:layout_toRightOf="@id/image1"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv2_1"
+                android:layout_toEndOf="@id/image2"
+                android:layout_toRightOf="@id/image2"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3_1"
+                android:layout_toEndOf="@id/image3"
+                android:layout_toRightOf="@id/image3"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv4_1"
+                android:layout_toEndOf="@id/image4"
+                android:layout_toRightOf="@id/image4"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv5_1"
+                android:layout_toEndOf="@id/image5"
+                android:layout_toRightOf="@id/image5"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv6_1"
+                android:layout_toEndOf="@id/image6"
+                android:layout_toRightOf="@id/image6"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv7_1"
+                android:layout_toEndOf="@id/image7"
+                android:layout_toRightOf="@id/image7"
+                android:text="선택" />
+
+            <CheckBox
+                android:id="@+id/cb8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv8_1"
+                android:layout_toEndOf="@id/image8"
+                android:layout_toRightOf="@id/image8"
+                android:text="선택" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_cart"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="20dp"
+        android:text="cart" />
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/btn_cart"
+        android:layout_toRightOf="@id/btn_cart"
+        android:text="buy" />
+
+</RelativeLayout>
