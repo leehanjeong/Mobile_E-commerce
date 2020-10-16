@@ -19,39 +19,22 @@ public class SelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
+        Integer[] tvId = {R.id.tv1, R.id.tv2,R.id.tv3,R.id.tv4, R.id.tv5, R.id.tv6, R.id.tv7, R.id.tv8};
+        Integer[] tv_Id = {R.id.tv1_1, R.id.tv2_1,R.id.tv3_1,R.id.tv4_1, R.id.tv5_1, R.id.tv6_1, R.id.tv7_1, R.id.tv8_1};
+        Integer[] cbId = {R.id.cb1, R.id.cb2, R.id.cb3, R.id.cb4, R.id.cb5, R.id.cb6, R.id.cb7, R.id.cb8};
+
+        final TextView[] tvList = new TextView[8];
+        final TextView[] tv_List = new TextView[8];
+        final CheckBox[] cbList = new CheckBox[8];
+
+        for(int i=0; i<8; i++) {
+            tvList[i] = (TextView) findViewById(tvId[i]);
+            tv_List[i] = (TextView) findViewById(tv_Id[i]);
+            cbList[i] = (CheckBox) findViewById(cbId[i]);
+        }
+
         Button btn_cart = (Button) findViewById(R.id.btn_cart);
         Button btn_buy = (Button) findViewById(R.id.btn_buy);
-
-        CheckBox cb1 = (CheckBox) findViewById(R.id.cb1);
-        CheckBox cb2 = (CheckBox) findViewById(R.id.cb2);
-        CheckBox cb3 = (CheckBox) findViewById(R.id.cb3);
-        CheckBox cb4 = (CheckBox) findViewById(R.id.cb4);
-        CheckBox cb5 = (CheckBox) findViewById(R.id.cb5);
-        CheckBox cb6 = (CheckBox) findViewById(R.id.cb6);
-        CheckBox cb7 = (CheckBox) findViewById(R.id.cb7);
-        CheckBox cb8 = (CheckBox) findViewById(R.id.cb8);
-
-        TextView tv1 = (TextView) findViewById(R.id.tv1);
-        TextView tv2 = (TextView) findViewById(R.id.tv2);
-        TextView tv3 = (TextView) findViewById(R.id.tv3);
-        TextView tv4 = (TextView) findViewById(R.id.tv4);
-        TextView tv5 = (TextView) findViewById(R.id.tv5);
-        TextView tv6 = (TextView) findViewById(R.id.tv6);
-        TextView tv7 = (TextView) findViewById(R.id.tv7);
-        TextView tv8 = (TextView) findViewById(R.id.tv8);
-
-        TextView tv1_1 = (TextView) findViewById(R.id.tv1_1);
-        TextView tv2_1 = (TextView) findViewById(R.id.tv2_1);
-        TextView tv3_1 = (TextView) findViewById(R.id.tv3_1);
-        TextView tv4_1 = (TextView) findViewById(R.id.tv4_1);
-        TextView tv5_1 = (TextView) findViewById(R.id.tv5_1);
-        TextView tv6_1 = (TextView) findViewById(R.id.tv6_1);
-        TextView tv7_1 = (TextView) findViewById(R.id.tv7_1);
-        TextView tv8_1 = (TextView) findViewById(R.id.tv8_1);
-
-        final CheckBox[] cbList = {cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8};
-        final TextView[] tvList = {tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8};
-        final TextView[] tv_List = {tv1_1, tv2_1, tv3_1, tv4_1, tv5_1, tv6_1, tv7_1, tv8_1};
 
         //button click event 처리
         btn_cart.setOnClickListener(new View.OnClickListener(){
@@ -74,9 +57,9 @@ public class SelectActivity extends AppCompatActivity {
             }
         });
 
-    }
+    } // End of OnCreate()
 
-    public ArrayList<String> GetCheckedItem(CheckBox[] cbArr, TextView[] tvArr) { //check된 상품의 상품명을 ArrayList에 담아 리턴해주는 함수
+    public static ArrayList<String> GetCheckedItem(CheckBox[] cbArr, TextView[] tvArr) { //check된 상품의 상품명을 ArrayList에 담아 리턴해주는 함수, CartActivity에서도 사용하기 위해 static 선언.
         ArrayList<String> checkedItem = new ArrayList<String>();
 
         for(int i=0; i<8; i++) {
@@ -87,7 +70,7 @@ public class SelectActivity extends AppCompatActivity {
         return checkedItem;
     }
 
-    public ArrayList<String> GetCheckedPrice(CheckBox[] cbArr, TextView[] tv_Arr) { //check된 상품의 가격을 ArrayList에 담아 리턴해주는 함수
+    public static ArrayList<String> GetCheckedPrice(CheckBox[] cbArr, TextView[] tv_Arr) { //check된 상품의 가격을 ArrayList에 담아 리턴해주는 함수
         ArrayList<String> checkedPrice = new ArrayList<String>();
 
         for(int i=0; i<8; i++) {
