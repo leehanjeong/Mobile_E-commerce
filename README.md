@@ -6,9 +6,9 @@ AVD: Pixel 2 API 29
 
 ---------------------------------
 ### 파일 구성
--activity_select.xml (상품 선택 페이지)
--activity_cart.xml (장바구니 페이지)
--activity_buy.xml (구매 페이지)
+-activity_select.xml (상품 선택 페이지)  
+-activity_cart.xml (장바구니 페이지)  
+-activity_buy.xml (구매 페이지)  
 
 -SelectActivity.java: 선택된 상품의 정보를 CartActivity 또는 BuyActivity로 전달  
 -CartActivity.java: SelectActivity에서 받은 선택 상품을 보여주고, 다시 선택된 상품을 BuyActivity로 전달. Home버튼을 누르면 다시 상품 선택 페이지로 돌아감.  
