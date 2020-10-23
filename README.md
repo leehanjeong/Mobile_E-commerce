@@ -1,7 +1,9 @@
 # Project_20191650
+
 --------------------------------
 ### 실행 환경
 AVD: Pixel 2 API 29
+
 ---------------------------------
 ### 파일 구성
 -activity_select.xml (상품 선택 페이지)
@@ -11,6 +13,7 @@ AVD: Pixel 2 API 29
 -SelectActivity.java: 선택된 상품의 정보를 CartActivity 또는 BuyActivity로 전달  
 -CartActivity.java: SelectActivity에서 받은 선택 상품을 보여주고, 다시 선택된 상품을 BuyActivity로 전달. Home버튼을 누르면 다시 상품 선택 페이지로 돌아감.  
 -BuyActivity.java: CartActivity 또는 SelectActivity에서 받은 정보로 총 금액을 계산하고, 연락처, 주소를 입력받음. 이를 firebase에 저장.  
+
 --------------------------------
 ### 실행 화면
 
@@ -35,9 +38,10 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
 주소와 연락처를 입력한 후 결제하기 버튼을 누르면 다시 선택페이지로 돌아간 후,   
 ![2020-10-23 (20)](https://user-images.githubusercontent.com/54920378/97005969-1b1cd580-157a-11eb-92ab-16abc2ffd963.png)  
 주문이 완료되었습니다. 라는 toast메세지가 뜨도록 하였다.  
+
 --------------------------------
 ### 코드 구현 설명
-1) SelectActivity.java
+#### 1) SelectActivity.java
 
 '''
 
@@ -90,7 +94,7 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
         '''    
 버튼 클릭을 했을 때 Intent를 이용하여 정보와 함께 다른 액티비티로 넘어가는 코드이다.  
 
-2) CartActivity  
+#### 2) CartActivity  
 '''
 
         Intent intent = getIntent();
@@ -131,7 +135,7 @@ SelectActivity에서 보낸 Intent를 받는 코드이다.
  
  위의 SelectActivity에서와 같이 버튼 클릭 이벤트를 처리하는 코드이다.  
  
- 3) BuyActivity  
+ #### 3) BuyActivity  
  '''
  
     class User {
