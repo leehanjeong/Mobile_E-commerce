@@ -7,7 +7,7 @@ AVD: Pixel 2 API 29
 -activity_select.xml (상품 선택 페이지)
 -activity_cart.xml (장바구니 페이지)
 -activity_buy.xml (구매 페이지)
-#####
+
 -SelectActivity.java: 선택된 상품의 정보를 CartActivity 또는 BuyActivity로 전달  
 -CartActivity.java: SelectActivity에서 받은 선택 상품을 보여주고, 다시 선택된 상품을 BuyActivity로 전달. Home버튼을 누르면 다시 상품 선택 페이지로 돌아감.  
 -BuyActivity.java: CartActivity 또는 SelectActivity에서 받은 정보로 총 금액을 계산하고, 연락처, 주소를 입력받음. 이를 firebase에 저장.  
@@ -40,6 +40,7 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
 1) SelectActivity.java
 
 '''
+
     public static ArrayList<String> GetCheckedItem(CheckBox[] cbArr, TextView[] tvArr) { //check된 상품의 상품명을 ArrayList에 담아 리턴해주는 함수, CartActivity에서도 사용하기 위해 static 선언.
         ArrayList<String> checkedItem = new ArrayList<String>();
 
@@ -65,6 +66,7 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
  다음 액티비티로 보낼 정보(상품 이름, 상품 가격)을 ArrayList에 담는 코드이다.  
 
 '''
+
         //button click event 처리
         btn_cart.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -90,6 +92,7 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
 
 2) CartActivity  
 '''
+
         Intent intent = getIntent();
 
         ArrayList<String> checkedItem = (ArrayList<String>) intent.getSerializableExtra("checkedItem"); // 체크된 아이템 이름 ArrayList로 받기
@@ -97,6 +100,7 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
 '''  
 SelectActivity에서 보낸 Intent를 받는 코드이다.  
 '''
+
         for(int i=0; i<checkedItem.size(); i++) {
             textList[i].setText(checkedItem.get(i));
             text_List[i].setText(checkedPrice.get(i));
@@ -105,6 +109,7 @@ SelectActivity에서 보낸 Intent를 받는 코드이다.
 '''  
 8개의 체크박스 중 들어온 상품이 개수만큼만 체크박스를 보이게 하는 코드이다.  
 '''
+
         btn_cart_buy.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -122,11 +127,13 @@ SelectActivity에서 보낸 Intent를 받는 코드이다.
                 startActivity(intent);
             }
         });
- '''  
+ ''' 
+ 
  위의 SelectActivity에서와 같이 버튼 클릭 이벤트를 처리하는 코드이다.  
  
  3) BuyActivity  
  '''
+ 
     class User {
         public String id;
         public String phoneNumber;
@@ -144,11 +151,13 @@ SelectActivity에서 보낸 Intent를 받는 코드이다.
 '''  
 User에 대한 정보를 가지고 있는 class이다.  
 '''
+
         final ArrayList<String> checkedItem = (ArrayList<String>) intent.getSerializableExtra("checkedItem"); // 체크된 아이템 이름 ArrayList로 받기
         final ArrayList<String> checkedPrice = (ArrayList<String>) intent.getSerializableExtra("checkedPrice"); // 체크된 아이템 가격 ArryaList로 받기
 '''  
 Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.  
 '''
+
         for(String p : checkedPrice) { // 총 결제 금액 계산
             p = p.replace(",", "");
             p = p.substring(0, p.length()-1);
@@ -160,6 +169,7 @@ Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.
  '''  
  금액에서 특수부호와 '원'을 제거한 뒤 덧셈을 통해 총 금액을 구하고, 다시 원 형태로 돌려놓는 코드이다.  
  '''
+ 
         t_List[8].setText(strTotalPrice);
 
         for(int i=0; i<checkedItem.size(); i++) {
@@ -169,6 +179,7 @@ Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.
  '''
  TextView에 setText()하는 코드이다.  
  '''
+ 
           btn_order.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -190,6 +201,7 @@ Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.
             '''  
 결제하기 버튼이 눌렸을 때 firebase로 정보를 전하고 toast메세지를 띄우는 코드이다.  
 '''
+
 //정보를 저장하는 함수
             private void storeInfo(String userId, String phone_text, String address_text) {
                 User user = new User(userId, phone_text, address_text);
