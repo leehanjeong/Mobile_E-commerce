@@ -106,6 +106,7 @@ TableRow로 행을 추가하여 그 안에 TextView, EditText, Button을 배치�
         ArrayList<String> checkedPrice = (ArrayList<String>) intent.getSerializableExtra("checkedPrice"); // 체크된 아이템 가격 ArryaList로 받기
 '''  
 SelectActivity에서 보낸 Intent를 받는 코드이다.  
+
 '''
 
         for(int i=0; i<checkedItem.size(); i++) {
@@ -115,6 +116,7 @@ SelectActivity에서 보낸 Intent를 받는 코드이다.
         }
 '''  
 8개의 체크박스 중 들어온 상품이 개수만큼만 체크박스를 보이게 하는 코드이다.  
+
 '''
 
         btn_cart_buy.setOnClickListener(new View.OnClickListener(){
@@ -157,12 +159,14 @@ SelectActivity에서 보낸 Intent를 받는 코드이다.
     }
 '''  
 User에 대한 정보를 가지고 있는 class이다.  
+
 '''
 
         final ArrayList<String> checkedItem = (ArrayList<String>) intent.getSerializableExtra("checkedItem"); // 체크된 아이템 이름 ArrayList로 받기
         final ArrayList<String> checkedPrice = (ArrayList<String>) intent.getSerializableExtra("checkedPrice"); // 체크된 아이템 가격 ArryaList로 받기
 '''  
 Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.  
+
 '''
 
         for(String p : checkedPrice) { // 총 결제 금액 계산
@@ -175,6 +179,7 @@ Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.
         strTotalPrice += "원";
  '''  
  금액에서 특수부호와 '원'을 제거한 뒤 덧셈을 통해 총 금액을 구하고, 다시 원 형태로 돌려놓는 코드이다.  
+ 
  '''
  
         t_List[8].setText(strTotalPrice);
@@ -185,6 +190,7 @@ Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.
         }
  '''
  TextView에 setText()하는 코드이다.  
+ 
  '''
  
           btn_order.setOnClickListener(new View.OnClickListener(){
@@ -207,9 +213,10 @@ Intent를 이용하여 체크된 아이템 정보를 받는 코드이다.
             }
             '''  
 결제하기 버튼이 눌렸을 때 firebase로 정보를 전하고 toast메세지를 띄우는 코드이다.  
+
 '''
 
-//정보를 저장하는 함수
+            //정보를 저장하는 함수
             private void storeInfo(String userId, String phone_text, String address_text) {
                 User user = new User(userId, phone_text, address_text);
 
